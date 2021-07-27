@@ -1,13 +1,15 @@
-import React, { Component } from "react";
+import React from "react";
 import ReactDOM from "react-dom";
-export default class App extends React.Component {
-  render() {
-    return (
-      <div className="App">
-        <h1>Olá Mundo!</h1>
-      </div>
-    )
-  }
+
+import Routes from "./Routes";
+
+export default function App() {
+  return (
+    <div className="App">
+      <Routes />
+    </div>
+  )
 }
+
 const item = document.getElementById('root');
 ReactDOM.render(<App />, item);
