@@ -1,0 +1,23 @@
+.home {
+}
+
+.home section {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 32px;
+}
+
+.home .section-title {
+  font-family: 'Tangerine', cursive;
+  font-size: 42px;
+  font-weight: normal;
+  margin: 16px 0 0 0;
+  align-self: center;
+}
+
+.home .section-title-border {
+  filter: invert(63%) sepia(48%) saturate(669%) hue-rotate(5deg) brightness(96%) contrast(94%);
+  width: 199px;
+  align-self: center;
+  margin: 0 0 48px 0;
+}

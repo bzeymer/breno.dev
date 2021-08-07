@@ -1,0 +1,17 @@
+.timeline {
+}
+
+.timeline div {
+}
+
+.timeline .title {
+}
+
+.timeline .description {
+  padding-top: 16px;
+}
+
+.timeline .markdown strong, .timeline strong.markdown {
+  color: var(--verde-escuro);
+  letter-spacing: 0.3px;
+}

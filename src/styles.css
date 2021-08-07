@@ -1,0 +1,49 @@
+body {
+  margin: 0;
+  box-sizing: border-box;
+  color: #daa520;
+  font-family: 'Raleway', sans-serif;
+
+  --phone-upper-boundary: 600px;
+  --tablet-portrait-upper-boundary: 900px;
+  --tablet-landscape-upper-boundary: 1200px;
+  --desktop-upper-boundary: 1800px;
+
+  --lateral-body-padding: 10vw;
+
+  --verde-escuro: #146c67;
+  --verde-medio: #00b3a9;
+  --bege-fundo: #f9f4e9;
+}
+
+#root {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(236, 219, 182, 0.3);
+}
+
+@media (max-width: 599px) {
+  .body {
+    --lateral-body-padding: 10vw;
+  }
+}
+
+@media (min-width: 600px) {
+  .body {
+  }
+}
+
+@media (min-width: 900px) {
+  .body {
+  }
+}
+
+@media (min-width: 1200px) {
+  .body {
+  }
+}
+
+@media (min-width: 1800px) {
+  .body {
+  }
+}

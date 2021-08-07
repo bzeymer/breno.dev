@@ -10,7 +10,6 @@ function Routes() {
   return (
     <HashRouter basename='/'>
       <Structure>
-        <hot-toast />
         <Switch>
           <Route exact path='/' component={Home} />
           <Route component={NotFound} />

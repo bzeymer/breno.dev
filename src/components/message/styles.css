@@ -1,0 +1,17 @@
+.message {
+
+}
+
+.message div {
+  padding-bottom: 16px;
+  font-size: 18px;
+}
+
+.message .title {
+  font-weight: 700;
+  letter-spacing: 0.3px;
+}
+
+.message .paragraph {
+  line-height: 1.5;
+}
