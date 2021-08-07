@@ -1,5 +1,13 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './styles.css';
+
+import fotoCarnaval from '../../images/carnaval.jpeg';
+import fotoBBQ from '../../images/bbq.jpeg';
+import fotoNatal from '../../images/natal.jpeg';
+import fotoNoivado from '../../images/noivado.jpeg';
+import fotoAp1 from '../../images/ap11.jpeg';
+import fotoAdocaoBreno from '../../images/adocaoBreno.jpeg';
+import fotoLapinha from '../../images/lapinha.jpeg';
 
 import {
   Timeline,
@@ -29,43 +37,43 @@ const items = [
     subtitle: "Quando isso ainda existia",
     date: "Fevereiro 2019",
     description: "Ele fantasiado de Seu Boneco (mendigo) e ela de tentando ser um Unicórnio (de dois metros de altura)",
-    image: ""
+    image: fotoCarnaval
   },{
     type: TYPES.IMAGE,
     title: "BBQ Backer",
     date: "Agosto 2019",
     description: "Melhor dia da vida dela. O dia que ele descobriu que ela dá prejuízo pra churrascaria.",
-    image: ""
+    image: fotoBBQ
   },{
     type: TYPES.VIDEO,
     title: "Adoção do Ziggy",
     date: "Abril 2020",
     description: "Ela caiu no golpe do “não passa de 10 kilos”. Hoje ele pesa 20.",
-    video: "Tj5cuQA21Zs"
+    video: "IL8M4YNACEo"
   },{
     type: TYPES.IMAGE,
     title: "Adoção do Breno",
     date: "Abril 2020",
     description: "No dia seguinte ela adotou outro vira-lata.",
-    image: ""
+    image: fotoAdocaoBreno
   },{
     type: TYPES.IMAGE,
     title: "Primeira mudança de casa",
     date: "Junho 2020",
     description: "Primeira casinha dos dois. A cobertura maravilhosa e suas infiltrações.",
-    image: ""
+    image: fotoAp1
   },{
     type: TYPES.IMAGE,
     title: "Natal 2020",
     date: "Dezembro 2020",
     description: "Primeiro natal só dos dois",
-    image: ""
+    image: fotoNatal
   },{
     type: TYPES.VIDEO,
     title: "Primeira viagem em família (Macacos)",
     date: "Janeiro 2021",
     description: "Depois dessa farra os cachorros tomaram banho na Jacuzzi da pousada.",
-    video: "Tj5cuQA21Zs"
+    video: "mX3MkmGAB38"
   },{
     type: TYPES.IMAGE,
     title: "Segunda mudança de casa",
@@ -77,13 +85,13 @@ const items = [
     title: "Pedido de casamento",
     date: "Junho 2021",
     description: "Regado a camarão e vinho!",
-    image: ""
+    image: fotoNoivado
   },{
     type: TYPES.IMAGE,
     title: "Segunda viagem em família (Lapinha da Serra)",
     date: "Julho 2021",
     description: "A gente realmente gosta de trilhas e cachoeiras. Os cachorros também!",
-    image: ""
+    image: fotoLapinha
   },{
     type: TYPES.TEXT,
     title: "Casamento",
@@ -110,7 +118,10 @@ const customTheme = createTheme(themes.default, {
   date: {
     backgroundColor: '#daa520',
     color: '#fff',
-  }
+  },
+  imageAtom: {
+    maxHeight: 'unset',
+  },
 });
 
 function MyTimeline() {
@@ -132,8 +143,7 @@ function MyTimeline() {
       <ImageEvent
         date={item.date}
         text={`**${item.title}** ${item.subtitle ? '- ' + item.subtitle : ''}`}
-        src="https://res.cloudinary.com/dovoq8jou/image/upload/v1564772194/jellyfish.jpg"
-        alt="jellyfish swimming"
+        src={item.image}
       >
         <div className='description'>
           {item.description}
@@ -157,17 +167,15 @@ function MyTimeline() {
   }
 
   return (
-    <div>
-      <Timeline opts={{ layout: 'alt-evts-inline-date' }} theme={customTheme}>
-        <Events>
-          {items.map(item => {
-            if (item.type === TYPES.TEXT) return renderTextEvent(item);
-            if (item.type === TYPES.IMAGE) return renderImageEvent(item);
-            if (item.type === TYPES.VIDEO) return renderVideoEvent(item);
-          })}
-        </Events>
-      </Timeline>
-    </div>
+    <Timeline opts={{ layout: 'alt-evts-inline-date' }} theme={customTheme}>
+      <Events>
+        {items.map(item => {
+          if (item.type === TYPES.TEXT) return renderTextEvent(item);
+          if (item.type === TYPES.IMAGE) return renderImageEvent(item);
+          if (item.type === TYPES.VIDEO) return renderVideoEvent(item);
+        })}
+      </Events>
+    </Timeline>
   )
 }
 

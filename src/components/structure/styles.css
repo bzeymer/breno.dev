@@ -11,13 +11,13 @@
 }
 
 .header {
-  height: 55px;
-  padding: 12px 24px;
+  height: 3.4375rem;
+  padding: 0.75rem 1.5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
   font-family: 'Tangerine', cursive;
-  font-size: 48px;
+  font-size: 3rem;
   user-select: none;
   /* background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.1)); */
   background-color: #f9f4e9;
@@ -30,7 +30,7 @@
 
 .header .logo {
   align-self: flex-start;
-  font-size: 40px;
+  font-size: 2.5rem;
   position: relative;
 }
 
@@ -39,8 +39,8 @@
 }
 
 .header .logo .logoB {
-  top: 15px;
-  left: 15px;
+  top: 0.9375rem;
+  left: 0.9375rem;
 }
 
 .coroa {
@@ -54,7 +54,26 @@
 
 .body {
   overflow-y: scroll;
-  max-height: calc(100vh - 79px);
+  max-height: calc(100vh - 94px);
   padding: 0 var(--lateral-body-padding);
   padding-top: 100px;
+  padding-bottom: 3rem;
+}
+
+.footer {
+  height: 35px;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer .heart {
+  color: #ff0d0d;
+  padding: 0 4px;
+}
+
+.footer .heart:hover {
+  font-size: 16px;
+  padding: 0 2px;
 }
