@@ -1,7 +1,7 @@
 @import "../../styles.css";
 
 .structure {
-  max-height: 100vh;
+  max-height: 100%;
   overflow: hidden;
   position: absolute;
   top: 0;
@@ -20,7 +20,7 @@
   font-size: 3rem;
   user-select: none;
   /* background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.1)); */
-  background-color: #f9f4e9;
+  background-color: var(--bege-fundo);
   position: fixed;
   top: 0;
   right: 0;
@@ -57,7 +57,6 @@
   max-height: calc(100vh - 94px);
   padding: 0 var(--lateral-body-padding);
   padding-top: 100px;
-  padding-bottom: 3rem;
 }
 
 .footer {
@@ -66,6 +65,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  padding-bottom: var(--bottom-footer-padding);
 }
 
 .footer .heart {
@@ -77,3 +77,5 @@
   font-size: 16px;
   padding: 0 2px;
 }
+
+@media
